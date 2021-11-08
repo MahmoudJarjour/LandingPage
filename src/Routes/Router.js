@@ -20,15 +20,15 @@ const cacheRtl = createCache({
 const theme = createTheme({
   direction: getLanguage() === "ar" ? "rtl" : "ltr",
   palette: {
-    primary: {
-      main: "#0c9fc1",
-    },
     background: {
-      default: "#542135",
+      default: "#662141",
+    },
+    primary: {
+      main: "#662141",
     },
   },
   typography: {
-    fontFamily: "Cairo",
+    fontFamily: getLanguage() === "ar" ? "Tajawal" : "Advent Pro",
     fontSize: "16px",
   },
   overrides: {
@@ -48,6 +48,33 @@ const theme = createTheme({
     },
   },
 });
+
+theme.typography.h1 = {
+  fontSize: "7rem",
+  fontWeight: "bold",
+  "@media (min-width:600px)": {
+    fontSize: "7rem",
+    lineHeight: "7rem",
+  },
+  [theme.breakpoints.only("xs")]: {
+    fontSize: "4.5rem",
+    lineHeight: "4.5rem",
+  },
+};
+
+theme.typography.h2 = {
+  fontSize: "2.5rem",
+  fontWeight: "bold",
+  "@media (min-width:600px)": {
+    fontSize: "2.5rem",
+    lineHeight: "3.5rem",
+  },
+  [theme.breakpoints.only("xs")]: {
+    fontSize: "1.5rem",
+    lineHeight: "2.5rem",
+  },
+};
+
 const LanguageContainer = ({ children }) => {
   if (getLanguage() === "ar") {
     return <CacheProvider value={cacheRtl}>{children}</CacheProvider>;
