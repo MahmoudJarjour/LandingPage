@@ -1,3 +1,11 @@
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-rounded.MuiPaper-elevation0.MuiAccordion-root.MuiAccordion-rounded.MuiAccordion-gutters:before {
   background-color: transparent !important;
 }
+.App {
+  background-image: "url(/background.jpeg)";
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-size: cover;
+  background-position: center;
+}

@@ -2,7 +2,6 @@ import React from "react";
 import Home from "../Pages/Home";
 import NotFound from "../Pages/NotFound";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Layout from "../Components/Layout";
 import i18next from "i18next";
 import { createTheme, ThemeProvider } from "@mui/material";
 import i18n from "../Locales/i18n";
@@ -25,7 +24,7 @@ const theme = createTheme({
       main: "#0c9fc1",
     },
     background: {
-      default: "#f5f5f5",
+      default: "#0c9fc1",
     },
   },
   typography: {

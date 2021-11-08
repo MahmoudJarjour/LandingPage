@@ -8,15 +8,17 @@ const Header = () => {
 
   return (
     <Grid container spacing={3} pt={3}>
-      <Grid item xs={12}>
-        <Typography variant="h2" component="h1">
-          {t("title")}
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <Typography variant="h4" component="h4">
-          {t("subtitle")}
-        </Typography>
+      <Grid item xs={12} md={4}>
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs={4}>
+            <img src="Gherbal.png" style={{ width: "100%" }} />
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h1" component="h1" sx={{ color: "white" }}>
+              <b>{t("Gherbal")}</b>
+            </Typography>
+          </Grid>
+        </Grid>
       </Grid>
     </Grid>
   );
