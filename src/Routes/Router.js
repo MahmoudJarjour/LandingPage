@@ -21,10 +21,10 @@ const theme = createTheme({
   direction: getLanguage() === "ar" ? "rtl" : "ltr",
   palette: {
     background: {
-      default: "#662141",
+      default: "#524fa1",
     },
     primary: {
-      main: "#662141",
+      main: "#524fa1",
     },
   },
   typography: {
