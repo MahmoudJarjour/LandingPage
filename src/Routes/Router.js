@@ -50,11 +50,11 @@ const theme = createTheme({
 });
 
 theme.typography.h1 = {
-  fontSize: "7rem",
+  fontSize: "6rem",
   fontWeight: "bold",
   "@media (min-width:600px)": {
-    fontSize: "7rem",
-    lineHeight: "7rem",
+    fontSize: "6rem",
+    lineHeight: "6rem",
   },
   [theme.breakpoints.only("xs")]: {
     fontSize: "4.5rem",

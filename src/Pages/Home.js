@@ -9,11 +9,14 @@ import {
   CardMedia,
   CardContent,
   IconButton,
+  Button,
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Email, Facebook, Instagram, Twitter } from "@mui/icons-material";
 import LanguageIcon from "@mui/icons-material/Language";
 import i18next from "i18next";
+import { useHistory } from "react-router";
+import i18n from "../Locales/i18n";
 const getLanguage = () => i18next.language || window.localStorage.i18nextLng;
 function Copyright() {
   return (
@@ -31,6 +34,10 @@ function Copyright() {
 const Home = () => {
   const { t } = useTranslation();
 
+  const langLink =
+    i18n.language === "en"
+      ? window.location.origin + "/ar" + window.location.pathname
+      : window.location.origin + window.location.pathname.replace("/ar", "");
   return (
     <Box
       sx={{
@@ -39,29 +46,21 @@ const Home = () => {
         minHeight: "100vh",
       }}
     >
-      <Grid
-        item
-        xs={12}
-        align={getLanguage() === "ar" ? "left" : "right"}
-        m="1%"
-      >
-        <IconButton
-          size="large"
-          href={
-            getLanguage() === "ar"
-              ? "http://localhost:3001/en"
-              : "http://localhost:3001/ar"
-          }
-          sx={{ fontSize: "22px" }}
-        >
-          <Typography variant="h4" sx={{ color: "white", mx: 3 }}>
-            {getLanguage() === "ar" ? "English" : "عربي"}
-          </Typography>
-          <LanguageIcon sx={{ color: "white" }} />
-        </IconButton>
-      </Grid>
       <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
         <Grid container justifyContent="center" alignItems="center" spacing={5}>
+          <Grid item xs={7} align={getLanguage() === "ar" ? "left" : "right"}>
+            <Button
+              size="large"
+              component={Link}
+              href={langLink}
+              sx={{ p: 0 }}
+              endIcon={<LanguageIcon sx={{ color: "white" }} />}
+            >
+              <Typography sx={{ color: "white" }}>
+                {getLanguage() === "ar" ? "English" : "عربي"}
+              </Typography>
+            </Button>
+          </Grid>
           <Grid item xs={7}>
             <img src="/assets/logo.png" style={{ width: "100%" }} alt="logo" />
           </Grid>
@@ -72,14 +71,14 @@ const Home = () => {
               style={{ backgroundColor: "transparent", position: "relative" }}
             >
               <CardMedia
-                image="assets/bubble.png"
+                image="/assets/bubble.png"
                 style={{ paddingTop: "100%" }}
               />
               <CardContent
                 style={{
                   position: "absolute",
                   width: "100%",
-                  top: "20%",
+                  top: "25%",
                 }}
               >
                 <Typography variant="h1" textAlign="center" color="primary">
