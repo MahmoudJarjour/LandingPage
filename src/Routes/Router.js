@@ -21,10 +21,10 @@ const theme = createTheme({
   direction: getLanguage() === "ar" ? "rtl" : "ltr",
   palette: {
     background: {
-      default: "#a29ff5",
+      default: "#524fa1",
     },
     primary: {
-      main: "#a29ff5",
+      main: "#524fa1",
     },
   },
   typography: {
@@ -68,12 +68,12 @@ theme.typography.h2 = {
   "@media (min-width:600px)": {
     fontSize: "2.5rem",
     lineHeight: "3.5rem",
-    color: "#262153",
+    color: "#f0f0f0",
   },
   [theme.breakpoints.only("xs")]: {
     fontSize: "1.5rem",
     lineHeight: "2.5rem",
-    color: "#262153",
+    color: "#f0f0f0",
   },
 };
 // #524fa1
