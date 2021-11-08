@@ -115,7 +115,7 @@ const Home = () => {
               <IconButton
                 href="https://facebook.com/elgherbalorg"
                 size="large"
-                sx={{ fontSize: "22px" }}
+                sx={{ fontSize: "22px", color: "#3B5998" }}
               >
                 <Facebook />
               </IconButton>
@@ -124,7 +124,7 @@ const Home = () => {
               <IconButton
                 href="https://twitter.com/elgherbalorg"
                 size="large"
-                sx={{ fontSize: "22px" }}
+                sx={{ fontSize: "22px", color: "#08a0e9" }}
               >
                 <Twitter />
               </IconButton>
@@ -133,7 +133,7 @@ const Home = () => {
               <IconButton
                 href="https://instagram.com/elgherbalorg"
                 size="large"
-                sx={{ fontSize: "22px" }}
+                sx={{ fontSize: "22px", color: "#E1306C" }}
               >
                 <Instagram />
               </IconButton>
