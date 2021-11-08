@@ -34,7 +34,12 @@ export default function StickyFooter() {
       <Header />
       <CssBaseline />
       <Container component="main" sx={{ mt: 8, mb: 2 }} maxWidth="sm">
-        <Typography variant="h2" component="h1" gutterBottom>
+        <Typography
+          variant="h2"
+          component="h1"
+          sx={{ color: "white" }}
+          gutterBottom
+        >
           {t("Coming soon")}
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
